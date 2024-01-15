@@ -1,5 +1,3 @@
-
-// @ts-check
 import { context } from 'esbuild';
 
 const ctx = await context({

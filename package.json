@@ -13,7 +13,11 @@
     "url": "https://github.com/Marcisbee/exome-docs-raw/issues"
   },
   "homepage": "https://github.com/Marcisbee/exome-docs-raw#readme",
+	"scripts": {
+		"dev": "bun run script/dev.ts"
+	},
   "devDependencies": {
+    "@biomejs/biome": "^1.5.2",
     "esbuild": "^0.19.2"
   },
   "dependencies": {
