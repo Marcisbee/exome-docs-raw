@@ -1,21 +1,21 @@
-import { context } from 'esbuild';
+import { context } from "esbuild";
 
 const ctx = await context({
-	outbase: 'src',
-	format: 'esm',
-	target: ['chrome60'],
-	entryPoints: ['./src/index.tsx'],
-	outdir: 'www',
+	outbase: "src",
+	format: "esm",
+	target: ["chrome60"],
+	entryPoints: ["./src/index.tsx"],
+	outdir: "www",
 	write: false,
 	bundle: true,
 	define: {
-		'process.env.NODE_ENV': '"development"',
+		"process.env.NODE_ENV": '"development"',
 	},
-	sourcemap: 'linked',
+	sourcemap: "linked",
 	metafile: false,
 	minify: true,
-	logLevel: 'info',
+	logLevel: "info",
 });
 
 await ctx.watch();
-await ctx.serve({ servedir: 'www' });
+await ctx.serve({ servedir: "www" });
